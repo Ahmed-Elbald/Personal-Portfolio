@@ -65,7 +65,7 @@ navToggleBtns.forEach(btn => { // For each element that has a class of "nav-togg
     // Specify whether it controls the desktop or mobile nav
     let type = btn.getAttribute("aria-controls");
 
-    if (type == "#desktop-nav") { // If it's controling the desktop nav:
+    if (type == "desktop-nav") { // If it's controling the desktop nav:
 
       btn.classList.toggle("js-closed");
       desktopNav.classList.toggle("js-hidden");
