@@ -26,7 +26,7 @@
   --flow-spacer-3: 2rem;
   --flow-spacer-4: 4rem;
   --flow-spacer-5: 5rem;
-  --flow-spacer-6: 7rem;
+  --flow-spacer-6: 8rem;
   --clr-pr-700: #B90000;
   --clr-pr-600: #0C0F0A;
   --clr-pr-200: #b8000080;
@@ -1633,8 +1633,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 220px;
-  max-width: 300px;
+  min-width: 250px;
+  max-width: 350px;
   height: 180px;
   position: relative;
   overflow: hidden;

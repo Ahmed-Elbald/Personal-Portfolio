@@ -136,8 +136,8 @@
 
     .c-section__tool {
       @include flex-centering();
-      min-width: 220px;
-      max-width: 300px;
+      min-width: 250px;
+      max-width: 350px;
       height: 180px;
       position: relative;
       overflow: hidden;

@@ -38,12 +38,20 @@ export function manageGallery() {
       // Get the image it targets
       let btnTargetedImg = btn.dataset.img;
 
-      // If it's the image that's currently opened:
-      if (currentImg === btnTargetedImg) {
+      // If we're on desktop, adjust the gallery position to be right above the button
+      if (windowWidth > 1000) {
 
-        // Hide it and return
-        hideGallery();
-        return;
+        // If it's the image that's currently opened:
+        if (currentImg === btnTargetedImg) {
+
+          // Hide it and return
+          hideGallery();
+          return;
+
+        }
+
+        certificateGallery.style.top = e.clientY + "px";
+        certificateGallery.style.left = e.clientX + "px";
 
       }
 
@@ -57,14 +65,6 @@ export function manageGallery() {
         if (img.dataset.img === btnTargetedImg) img.classList.add("js-visible");
 
       });
-
-      // If we're on desktop, adjust the gallery position to be right above the button
-      if (windowWidth > 1000) {
-
-        certificateGallery.style.top = e.clientY + "px";
-        certificateGallery.style.left = e.clientX + "px";
-
-      }
 
       // Show up the gallery
       certificateGallery.classList.add("js-grow");
