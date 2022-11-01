@@ -85,7 +85,7 @@ function insertItem(data, counter) {
     `
     <div class="c-triangle c-triangle--top" style="--dimention: 30px" data-lang=""></div>
     <div class="c-triangle c-triangle--bottom" style="--dimention: 30px" data-lang=""></div>
-    <img src="images/${repoTitle}.jpg" alt="" class="gallery__item__img">
+    <img src="images/${repoTitle}.webp" alt="" class="gallery__item__img">
     <div class="gallery__item__content">
       <h3 class="gallery__item__title">${repoTitle.replaceAll("-", " ")}</h3>
       <div class="gallery__item__links">
