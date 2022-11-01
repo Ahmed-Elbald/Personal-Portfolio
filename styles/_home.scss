@@ -171,6 +171,12 @@
       transition-duration: var(--transition-duration);
     }
 
+    &.js-ltr::before {
+      height: calc(100% + 1rem);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     &.js-fading {
       --width: 100%;
     }
