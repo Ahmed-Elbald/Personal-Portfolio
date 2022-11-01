@@ -29,7 +29,7 @@ export let currentSection = "home";
 
 // An intersectionObserver to make the "animate on scroll" animation
 const aosObserver = new IntersectionObserver(animateElement, {
-  threshold: .75,
+  threshold: .5,
 });
 
 // Observe all the elmenets that will animate on scroll
