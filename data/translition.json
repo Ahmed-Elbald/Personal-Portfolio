@@ -1,0 +1,114 @@
+{
+  "current-language": {
+    "ar": "EN",
+    "en": "العربية"
+  },
+  "nav-link-1": {
+    "ar": "الرئيسية",
+    "en": "Home"
+  },
+  "nav-link-2": {
+    "ar": "من أنا",
+    "en": "About Me"
+  },
+  "nav-link-3": {
+    "ar": "أعمالي",
+    "en": "Projects"
+  },
+  "nav-link-4": {
+    "ar": "تقنيات",
+    "en": "My Stack"
+  },
+  "nav-link-5": {
+    "ar": "التواصل",
+    "en": "Contact"
+  },
+  "facebook-link": {
+    "ar": "رابط الفيسبوك",
+    "en": "Facebook Link"
+  },
+  "github-link": {
+    "ar": "رابط الجيت هاب",
+    "en": "GitHub Link"
+  },
+  "attribution": {
+    "ar": "تم التطوير بواسطة أحمد سعد",
+    "en": "Made with <i class='fa-regular fa-heart'></i> by <span class='u-capitalize'>ahmed saad</span>"
+  },
+  "home-section__description": {
+    "ar": "بفضل خبرتي ومهاراتي في مجال تصميم واجهات المواقع، يمكنني مساعدتك لبناء مواقع تفاعلية وجذابة .. استمتع برحلتك في موقعي",
+    "en": "Thanks to my experience and skills in frontend development, I can help you build interactive and amazing websites... Have fun exploring my website!"
+  },
+  "home-section__btn": {
+    "ar": "أظهر مشاريعى",
+    "en": "Show my projects"
+  },
+  "about-section__description": {
+    "ar": "أسمي أحمد سعد وعمري <bdi class='js-my-age'>17</bdi> عاما. منذ عامين، اكتشفت شغفي في مجال البرمجة. بدأت عن طريق دراسة دورة <bdi class='u-marker'>CS50</bdi> التعليمية واللتي مهدت لي الطريق لاكتشاف هذا العالم قليلا. من بين المجالات المختلفة، لقد اخترت مجال تطوير الوجهات الأمامية للمواقع الألكترونية كاهتمامي الأساسي وبدأت بتعلم الأدوات واللغات المستخدمة بنفسي. أحب تحويل التصاميم الرائعة الي مواقع تفاعلية وأتمني أن يساهم ذلك في جعل الويب مكانا أفضل. يمكنني تحدث اللغة الأنجليزية بطلاقة حيث أني مهتم باللغات الأجنبية.",
+    "en": "My name is Ahmed Saad and I’m <span class='js-my-age'>17</span>. I live in a small city in Egypt called Fayoum. I’m a high school student. 2 years ago, I found my passion in programming. I immediately took up <span class='u-uppercase u-marker'>CS50</span> which set the stage for me to explore this world quite deeply. Among different fields, I chose frontend development as my main interest and I started to learn its tools on my own. I really like turning cool designs into interactive code and I hope this helps make the web a better place. I’m fluent in English as I’m interested in foreign languages too."
+  },
+  "projects-section__description": {
+    "ar": "بعض من الأعمال التي قمت بها بنفسي، معظمها تم تنفيذه بدون استخدام أي مكتبات خارجية",
+    "en": "Here are some of my projects. Most of which were implemented from scratch....."
+  },
+  "stack-section__description": {
+    "ar": "بعض الأدوات التي استخدمها",
+    "en": "Some tools I've been using"
+  },
+  "tools-html": {
+    "ar": "<i class='fa-brands fa-html5'></i><bdi class='u-uppercase'>html</bdi> هي أول اداة تعلمتها واستخدمها تقريبا في جميع مشاريعي كما استخدم ايضا <span class='u-uppercase'>html</span> canvas بالأضافة الي اني علي علم بال <bdi class='u-uppercase'>html</bdi> <bdi>accessibility.</bdi>",
+    "en": "<i class='fa-brands fa-html5'></i><span class='u-uppercase'>html</span> was the first tool I learnt. I use it nearly in most of my projects. I'm quite familiar with <spanclass='u-uppercase'>html</span> accessibility and <span class='u-uppercase'>html</span> canvas."
+  },
+  "tools-css": {
+    "ar": "<i class='fa-brands fa-css3-alt'></i> أنا أعشق <bdi class='u-uppercase'>css</bdi> (بكل ما تحوية من اشياء عجيبة) كما أني اجدها هبة لكل مطور للواجهات الأمامية. منذ بداياتي، لقد تدربت كثيرا علي كيفية التعامل مع ال  <bdi>animations</bdi> <bdi class='u-uppercase'>css</bdi> وال transitions بالأضافة الي عالم ال <bdi class='u-uppercase'>3d</bdi>",
+    "en": "<i class='fa-brands fa-css3-alt'></i> I love <span class='u-uppercase'>css</span> (including all its weird stuff) and I find it a releif for every frontend developer. Since my beginnings, I've been experimenting with <span class='u-uppercase'>css</span> animations, transitions and of course the world of 3D."
+  },
+  "tools-js": {
+    "ar": "<i class='fa-brands fa-square-js'></i><span class='u-uppercase'>js</span> لغة رائعة وتطورها مدهش. بعد تعلم الأساسيات واتقانها، انتقلت الي تعلم ال <span class='u-uppercase'>api</span>s المختلفة مثل <span class='u-uppercase'>dom,</span> <span class='u-uppercase'>bom,</span> <span class='u-capitalize'>fetch,</span> <span class='u-capitalize'>geolocation,</span> <span class='u-capitalize'>notifications,</span> <span class='u-capitalize'>fullscreen,</span> <span class='u-capitalize'>intersection oboserver,</span> <span class='u-capitalize'>fullscreen,</span> and <span class='u-capitalize'>vibration</span>",
+    "en": "<i class='fa-brands fa-square-js'></i> <span class='u-uppercase'>js</span> is just amazing and the evolution of it is fantastic. I'm pretty familiar with most of <span class='u-uppercase'>js</span> basics as well as many of its <span class='u-uppercase'>api</span>s like <span class='u-uppercase'>dom,</span> <span class='u-uppercase'>bom,</span> <span class='u-capitalize'>fetch,</span> <span class='u-capitalize'>geolocation,</span> <span class='u-capitalize'>notifications,</span> <span class='u-capitalize'>fullscreen,</span> <span class='u-capitalize'>intersection oboserver,</span> <span class='u-capitalize'>fullscreen,</span> and <span class='u-capitalize'>vibration</span>"
+  },
+  "tools-sass": {
+    "ar": "<i class='fa-brands fa-sass'></i> لقد تعلمت <bdi class='u-uppercase'>sass</bdi> أثناء تعلمي ل GitHub وأنا علي علم بمعظم مميزاتها مثل variables, mixins, concatanation and <bdi>modules.</bdi> كما اني استخدمها بالتبادل مع <bdi class='u-uppercase'>css</bdi> وفقا لحجم المشروع الذي أعمل عليه.",
+    "en": "<i class='fa-brands fa-sass'></i> I learned <span class='u-uppercase'>sass</span> along with GitHub and I'm pretty familiar with all the features it has like mixins, variables, concatenation up to modules. I use it interchangeably with <span class='u-uppercase'>css</span> according to the scale of the project."
+  },
+  "tools-react": {
+    "ar": "<i class='fa-brands fa-react'></i>",
+    "en": "<i class='fa-brands fa-react'></i> Progressing"
+  },
+  "tools-bootstrap": {
+    "ar": "<i class='fa-brands fa-bootstrap'></i>",
+    "en": "<i class='fa-brands fa-bootstrap'></i> Progressing"
+  },
+  "tools-figma": {
+    "ar": "<i class='fa-brands fa-figma'></i> من أجل أن اقوم بتصميم مشاريعي الخاصة، بدأت تعلم <span class='u-capitalize'>figma</span> والتي اتضح انها اداة مدهشة لتصميم ال <span class='u-capitalize'>layouts</span>",
+    "en": "<i class='fa-brands fa-figma'></i> In order for me to make my own designs, I started learning how to use <span class='u-capitalize'>figma.</span>. With all the features it has, it's a great tool for designing layouts."
+  },
+  "tools-github": {
+    "ar": "<i class='fa-brands fa-github'></i> بعد تعلم <span class='u-uppercase'>html</span> و <span class='u-uppercase'>css</span> كان من المهم أن اتعلم اداة يمكن الأعتماد عليها مثل <bdi>GitHub</bdi> في ابقاء مشاريعي امنه بالأضافة الي المجتمع الرائع الذي يتواجد بها.",
+    "en": "<i class='fa-brands fa-github'></i> After learning <span class='u-uppercase'>html</span> and <span class='u-uppercase'>css</span>, it was really important that I learn a reliable tool like GitHub which enables me to save my projects in a safe place as well as mingling with a lively community."
+  },
+  "stack-tool-content": {
+    "ar": "أضغط لتقرأ المحتوى.",
+    "en": "Click To Expand The Content"
+  },
+  "navigation-open-btn": {
+    "ar": "أفتح القائمة",
+    "en": "Open Navigation Bar"
+  },
+  "navigation-close-btn": {
+    "ar": "أغلق القائمة",
+    "en": "Close Navigation Bar"
+  },
+  "toggle-navigation": {
+    "ar": "أفتح/أغلق القائمة",
+    "en": "Toggle Navigation Bar"
+  },
+  "contact-section__description-1": {
+    "ar": "لا تتردد في التواصل معي...",
+    "en": "Don't hesitate to get in touch...."
+  },
+  "contact-section__description-2": {
+    "ar": "أرسل لي رسالة..",
+    "en": "Drop me a line:"
+  }
+}

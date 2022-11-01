@@ -1,0 +1,227 @@
+@use "variables-mixins.scss" as *;
+
+/* Stack Section */
+
+.c-section--stack {
+
+  .cubes-container {
+    position: absolute;
+    top: 9rem;
+    inset-inline-end: 18rem;
+    transform: rotateX(90deg);
+    transform-style: preserve-3d;
+
+    @include max-mq($desktop) {
+      display: none;
+    }
+  }
+
+  .layer {
+    --dimention: 35px;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
+    -ms-grid-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: calc(.4 * var(--dimention));
+    transform: translate3d(-50%,
+        -50%,
+        calc((1.4 * var(--dimention) * var(--offset)))) rotateX(-180deg);
+    transform-style: preserve-3d;
+    transition-duration: 1000ms;
+
+    &.js-rotate {
+      transform: translate3d(-50%,
+          -50%,
+          calc((1.4 * var(--dimention) * var(--offset)))) rotateX(-180deg) rotate(var(--random-angle));
+    }
+  }
+
+  .cube {
+    --bg-color: var(--clr-neu-300);
+    position: relative;
+    width: var(--dimention);
+    height: var(--dimention);
+    backface-visibility: visible;
+    transform-style: preserve-3d;
+    color: var(--main-color);
+
+    &:hover {
+      --bg-color: var(--main-color);
+      color: var(--clr-nue-300);
+    }
+
+    &__aspect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      @include flex-centering();
+      background-color: var(--bg-color);
+      font-size: calc(.6 * var(--dimention));
+      transition-duration: 200ms;
+
+      &:hover {
+
+        &,
+        &::before,
+        &::after {
+          box-shadow: 0 0 10px var(--main-color);
+        }
+      }
+
+      &::before,
+      &::after {
+        @include flex-centering();
+        position: absolute;
+        content: "" attr(data-content);
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        box-shadow: 0 0 5px rgb(55, 55, 52);
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 500;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        transition-duration: 200ms;
+      }
+
+      &--front {
+        &::before {
+          top: 0;
+          left: 100%;
+          transform-origin: left;
+          transform: rotateY(90deg) rotate(90deg) translate(calc(-.5 * var(--dimention)), calc(-.5 * var(--dimention)));
+        }
+
+        &::after {
+          right: 100%;
+          top: 0;
+          transform-origin: right;
+          transform: rotateY(-90deg) rotate(-90deg) translate(calc(.5 * var(--dimention)), calc(-.5 * var(--dimention)));
+        }
+      }
+
+      &--back {
+        transform: translateZ(calc(-1 * var(--dimention)));
+
+        &::before {
+          bottom: 100%;
+          left: 0;
+          transform-origin: bottom;
+          transform: rotateX(90deg) translateY(var(--dimention));
+        }
+
+        &::after {
+          top: 100%;
+          left: 0;
+          transform-origin: top;
+          transform: rotateX(90deg) rotateY(180deg);
+        }
+      }
+    }
+  }
+
+
+  .c-section__tools {
+    @include flex-row-gap((var(--flow-spacer-3) var(--flow-spacer-1)), center);
+
+    @include min-mq($desktop) {
+      justify-content: flex-start;
+    }
+
+    .c-section__tool {
+      @include flex-centering();
+      min-width: 220px;
+      max-width: 300px;
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+
+      &__open-btn {
+        font-size: var(--fs-800);
+        transition: opacity 250ms, color 500ms;
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+
+      &.js-grow .c-section__tool__open-btn {
+        @include hidden();
+      }
+
+      &__close-btn {
+        float: right;
+        margin-top: var(--flow-spacer-1);
+        margin-inline-end: var(--flow-spacer-1);
+        width: 15px;
+        height: 15px;
+
+        &.js-ltr {
+          float: left;
+        }
+      }
+
+      &__content {
+        --duration: 500ms;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 0;
+        width: 0;
+        opacity: 0;
+        background-color: var(--main-color);
+        transition-duration: var(--duration);
+        overflow-y: auto;
+        @include scrollbar(transparent, transparent);
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 0;
+        }
+
+        p {
+          padding-block: var(--flow-spacer-2);
+          padding-inline-start: var(--flow-spacer-2);
+          padding-inline-end: var(--flow-spacer-3);
+          transition-duration: 250ms;
+          transition-delay: var(--duration);
+          line-height: 1.2;
+          text-align: initial;
+          @include hidden();
+
+          &.js-ltr {
+            line-height: 1.5;
+          }
+
+          i {
+            font-size: var(--fs-400);
+            float: left;
+            margin-inline-end: var(--flow-spacer-1);
+          }
+
+          &.js-ltr i {
+            float: right;
+          }
+        }
+      }
+
+      &.js-grow .c-section__tool__content {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+
+        @include scrollbar(transparent, var(--main-color));
+
+        p {
+          @include show-up();
+        }
+      }
+    }
+  }
+}

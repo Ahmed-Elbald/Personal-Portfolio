@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="This is my personal portofolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Ahmed Saad | Portofolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon3.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- JS -->
+  <script src="js/main.js" type="module" defer></script>
+  <script src="js/language.js" type="module" defer></script>
+  <script src="js/home.js" type="module" defer></script>
+  <script src="js/about.js" type="module" defer></script>
+  <script src="js/projects.js" type="module" defer></script>
+  <script src="js/stack.js" type="module" defer></script>
+  <script src="js/contact.js" type="module" defer></script>
+
+  <!-- Emailjs Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="styles/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700;900&family=League+Spartan:wght@200;400;700;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- A loader for the page -->
+  <div class="loader" id="page-loader" role="alert" aria-busy="true">
+    <div class="loader__loops-container">
+      <div class="loader__loop loader__loop--right" data-lang>
+        <span style="--order: 0"></span>
+        <span style="--order: 1"></span>
+        <span style="--order: 2"></span>
+        <span style="--order: 3"></span>
+        <span style="--order: 4"></span>
+        <span style="--order: 5"></span>
+        <span style="--order: 6"></span>
+        <span style="--order: 7"></span>
+        <span style="--order: 8"></span>
+        <span style="--order: 9"></span>
+        <span style="--order: 10"></span>
+        <span style="--order: 11"></span>
+        <span style="--order: 12"></span>
+        <span style="--order: 13"></span>
+        <span style="--order: 14"></span>
+        <span style="--order: 15"></span>
+        <span style="--order: 16"></span>
+        <span style="--order: 17"></span>
+        <span style="--order: 18"></span>
+        <span style="--order: 19"></span>
+        <span style="--order: 20"></span>
+      </div>
+      <div class="loader__loop loader__loop--left" data-lang>
+        <span style="--order: 0"></span>
+        <span style="--order: 1"></span>
+        <span style="--order: 2"></span>
+        <span style="--order: 3"></span>
+        <span style="--order: 4"></span>
+        <span style="--order: 5"></span>
+        <span style="--order: 6"></span>
+        <span style="--order: 7"></span>
+        <span style="--order: 8"></span>
+        <span style="--order: 9"></span>
+        <span style="--order: 10"></span>
+        <span style="--order: 11"></span>
+        <span style="--order: 12"></span>
+        <span style="--order: 13"></span>
+        <span style="--order: 14"></span>
+        <span style="--order: 15"></span>
+        <span style="--order: 16"></span>
+        <span style="--order: 17"></span>
+        <span style="--order: 18"></span>
+        <span style="--order: 19"></span>
+        <span style="--order: 20"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Header -->
+  <header class="mobile-header">
+    <div class="l-container">
+
+      <!-- Logo -->
+      <div class="mobile-header__logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav" id="mobile-nav" data-lang="">
+
+        <!-- Language Button For Mobile And Close Button -->
+        <div class="mobile-nav__controls">
+          <button class="c-language-btn c-language-btn--mobile" aria-label="Change Site Language To Arabic" data-lang=""
+            type="button">
+            <span class="c-language-btn__icon" data-lang="">
+              <img class="ksa-flag" src="images/ksa.png" alt="">
+              <img class="usa-flag" src="images/usa.png" alt="">
+            </span>
+            <bdi class="c-language-btn__text" data-lang="current-language">
+              العربية
+            </bdi>
+          </button>
+          <button class="nav-toggle-btn" aria-controls="#mobile-nav" aria-expanded="true" type="button">
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22" aria-hidden="true">
+              <path fill="var(--clr-neu-300)" fill-rule="evenodd"
+                d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z" />
+            </svg>
+            <span class="u-sr-only" data-lang="navigation-close-btn">Cloes Navigation Bar</span>
+          </button>
+        </div>
+
+        <!-- Mobile Nav Links -->
+        <ul class="mobile-nav__links">
+          <li style="--order: 0" class="js-current">
+            <a href="#home" aria-label="Home" data-lang="nav-link-1">
+              Home
+            </a>
+          </li>
+          <li style="--order: 1">
+            <a href="#about" aria-label="About Me" data-lang="nav-link-2">
+              About Me
+            </a>
+          </li>
+          <li style="--order: 2">
+            <a href="#projects" aria-label="Projects" data-lang="nav-link-3">
+              Projects
+            </a>
+          </li>
+          <li style="--order: 3">
+            <a href="#stack" aria-label="My Stack" data-lang="nav-link-4">
+              My Stack
+            </a>
+          </li>
+          <li style="--order: 4">
+            <a href="#contact" aria-label="Contact" data-lang="nav-link-5">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Nav Social Links -->
+        <div class="mobile-nav__social-links">
+          <span>
+            <a href="https://web.facebook.com/abkareenooo/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="facebook-link">Facebook Link</span>
+            </a>
+          </span>
+          <span>
+            <a href="https://github.com/Ahmed-Elbald" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="github-link">GitHub Link</span>
+            </a>
+          </span>
+        </div>
+      </nav>
+
+      <!-- Language Button For Tablet -->
+      <button class="c-language-btn c-language-btn--tablet" aria-label="Change Site Language To Arabic" data-lang=""
+        type="button">
+        <span class="c-language-btn__icon" data-lang="">
+          <img class="ksa-flag" src="images/ksa.png" alt="">
+          <img class="usa-flag" src="images/usa.png" alt="">
+        </span>
+        <bdi class="c-language-btn__text" data-lang="current-language">
+          العربية
+        </bdi>
+      </button>
+
+      <!-- An Overlay For When The Nav Opens -->
+      <div class="mobile-nav-overlay"></div>
+
+      <!-- Mobile Nav Open Button -->
+      <button class="nav-toggle-btn" aria-controls="#mobile-nav" aria-expanded="false" type="button">
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="18" aria-hidden="true">
+          <g fill="var(--clr-pr-700)" fill-rule="evenodd">
+            <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
+          </g>
+        </svg>
+        <span class="u-sr-only" data-lang="navigation-open-btn">Open Navigation Bar</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Desktop Header -->
+  <header class="desktop-header">
+
+    <!-- decorative Mockups -->
+    <div class="c-decorator">
+      <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="193" viewBox="0 0 325 193" data-shape="true"
+        aria-hidden="true" id="cs-pattern-left">
+        <path fill="none" stroke="#B90000" stroke-miterlimit="50" stroke-width="2"
+          d="M17.053 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM45.122 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM73.19 9.57a7.891 7.891 0 11-15.781 0 7.891 7.891 0 0115.782 0zM101.26 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM129.329 9.57a7.891 7.891 0 11-15.783 0 7.891 7.891 0 0115.783 0zM238.083 103.963v0l-.561 22.259v0l22.259-.561v0l-.561 22.258v0l22.259-.56v0l-.561 22.258v0l22.259-.56v0l-.559 22.26v0l22.26-.56v0">
+        </path>
+      </svg>
+    </div>
+
+    <!-- A Decorative Triangle -->
+    <div class="c-triangle c-triangle--top" style="--dimention: 50px" data-lang></div>
+
+    <!-- Language Button For Desktop -->
+    <button class="c-language-btn c-language-btn--desktop" aria-label="Change Site Language To Arabic" type="button">
+      <span class="c-language-btn__icon" data-lang="">
+        <img class="ksa-flag" src="images/ksa.png" alt="">
+        <img class="usa-flag" src="images/usa.png" alt="">
+      </span>
+      <bdi class="c-language-btn__text" data-lang="current-language">
+        العربية
+      </bdi>
+    </button>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav" id="desktop-nav">
+
+      <!-- Desktop Nav Toggle Button -->
+      <button class="nav-toggle-btn desktop-nav__toggle-btn" aria-controls="#desktop-nav" aria-expanded="true"
+        type="button">
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="18" aria-hidden="true">
+          <g fill="currentcolor" fill-rule="evenodd">
+            <path d="M0 0h25v4H0zM0 7h25v4H0zM0 14h25v4H0z" />
+          </g>
+        </svg>
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22" aria-hidden="true">
+          <path fill="currentcolor" fill-rule="evenodd"
+            d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z" />
+        </svg>
+        <span class="u-sr-only" data-lang="toggle-navigation">Toggle Navigation Bar</span>
+      </button>
+
+      <!-- Desktop Nav Links -->
+      <ul class="desktop-nav__links">
+        <li class="desktop-nav__links__indicator" style="--state: 0"></li>
+        <li style="--order: 0" class="js-current desktop-nav__link">
+          <a aria-label="Home" data-section="home" data-lang="">
+            <i class="fa-solid fa-house" aria-hidden="true" data-content="Home" data-translation="الرئيسية"></i>
+            <span class="u-sr-only" data-lang="nav-link-1">Home</span>
+          </a>
+        </li>
+        <li style=" --order: 1" class="desktop-nav__link">
+          <a aria-label="About Me" data-section="about" data-lang="">
+            <i class="fa-solid fa-user" aria-hidden="true" data-content="About Me" data-translation="من أنا"></i>
+            <span class="u-sr-only" data-lang="nav-link-2">About Me</span>
+          </a>
+        </li>
+        <li style="--order: 2" class="desktop-nav__link">
+          <a aria-label="Projects" data-section="projects" data-lang="">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true" data-content="Projects" data-translation="أعمالي"></i>
+            <span class="u-sr-only" data-lang="nav-link-3">Projects</span>
+          </a>
+        </li>
+        <li style="--order: 3" class="desktop-nav__link">
+          <a aria-label="Technologies" data-section="stack" data-lang="">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true" data-content="Stack" data-translation="تقنيات"></i>
+            <span class="u-sr-only" data-lang="nav-link-4">Stack</span>
+          </a>
+        </li>
+        <li style="--order: 4" class="desktop-nav__link">
+          <a aria-label="Contact" data-section="contact" data-lang="">
+            <i class="fa-solid fa-phone" aria-hidden="true" data-content="Contact" data-translation="التواصل"></i>
+            <span class="u-sr-only" data-lang="nav-link-5">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- My Personal Photo -->
+    <div class="hero-img-wrapper" data-lang="">
+      <img src="images/final-1.png" alt="My Personal Photo">
+    </div>
+
+    <!-- Attribution -->
+    <p class="c-attribution" data-lang="attribution">
+      Made with <i class="fa-regular fa-heart"></i> by <span class="u-capitalize">ahmed saad</span>
+    </p>
+  </header>
+
+  <main class="main">
+
+    <!-- Two Divisions That Opan And Close While Transitioning From Section To Another -->
+    <div class="main__gate main__gate--right"></div>
+    <div class="main__gate main__gate--left"></div>
+
+    <!-- A Decorative Triangle -->
+    <div class="c-triangle c-triangle--bottom c-triangle--desktop" style="--dimention: 50px" data-lang=""></div>
+
+    <!-- Home Section -->
+    <section class="c-section c-section--home js-show-up" id="home" data-lang>
+
+      <!-- Decorative Mockups -->
+      <div class="c-decorator">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 935 701" id="avatar-shapes"
+          data-shape="true">
+          <path fill="none" stroke="#B90000" stroke-miterlimit="50" stroke-width="2"
+            d="M165.648 352.811v0l15.343 16.136v0l15.343-16.136v0l15.341 16.136v0l15.343-16.136v0l15.343 16.136v0l15.343-16.136v0l15.344 16.136v0l15.345-16.136v0">
+          </path>
+          <path fill="#B90000"
+            d="M112.476 1.58a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM131.444 1.58a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM169.38 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM188.348 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM207.315 1.58a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM226.283 1.58a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM245.252 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM264.22 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM283.188 1.58a1.5 1.5 0 11-3.002 0 1.5 1.5 0 013.002 0zM302.155 1.58a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 1.58a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM112.476 20.804a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM131.444 20.804a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM150.412 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM169.38 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM188.348 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM207.315 20.804a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM226.283 20.804a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM245.252 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM264.22 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM283.188 20.804a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.002 0zM302.155 20.804a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM321.123 20.804a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM112.476 40.026a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM131.444 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 40.026a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM226.283 40.026a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM245.252 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 40.026a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 59.25a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM131.444 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 59.25a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM226.283 59.25a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM245.252 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 59.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 78.473a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM131.444 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 78.473a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM226.283 78.473a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM245.252 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 78.473a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 97.696a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM131.444 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 97.696a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM226.283 97.696a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM245.252 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 97.696a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 116.92a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM131.444 116.92a1.5 1.5 0 11-3-.002 1.5 1.5 0 013 .001zM150.412 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013.001.001zM169.38 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013 .001zM188.348 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013 .001zM207.315 116.92a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM226.283 116.92a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM245.252 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013.001.001zM264.22 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013 .001zM283.188 116.92a1.5 1.5 0 11-3.002-.002 1.5 1.5 0 013.002.001zM302.155 116.92a1.5 1.5 0 11-3-.002 1.5 1.5 0 013 .001zM321.123 116.92a1.5 1.5 0 11-3.001-.002 1.5 1.5 0 013.001.001zM112.476 136.142a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM131.444 136.142a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM169.38 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM188.348 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM207.315 136.142a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM226.283 136.142a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM245.252 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM264.22 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM283.188 136.142a1.5 1.5 0 11-3.002 0 1.5 1.5 0 013.002 0zM302.155 136.142a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 136.142a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM112.476 155.365a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM131.444 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 155.365a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM226.283 155.365a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM245.252 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 155.365a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 174.588a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM131.444 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 174.588a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM226.283 174.588a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM245.252 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 174.588a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM112.476 193.811a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM131.444 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM150.412 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM169.38 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM188.348 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM207.315 193.811a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM226.283 193.811a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM245.252 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM264.22 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM283.188 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM302.155 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM321.123 193.811a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+          </path>
+          <path fill="#B90000"
+            d="M692.477 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM711.444 418.551a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM730.412 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM749.38 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM768.348 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM787.315 418.551a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 418.551a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM844.22 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM863.188 418.551a1.5 1.5 0 11-3.002 0 1.5 1.5 0 013.001 0zM882.155 418.551a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM901.123 418.551a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM692.477 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM711.444 437.774a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 .001zM730.412 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM749.38 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM768.348 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM787.315 437.774a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 437.774a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM844.22 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM863.188 437.774a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001.001zM882.155 437.774a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 .001zM901.123 437.774a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM692.477 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM711.444 456.998a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM730.412 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM749.38 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM768.348 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM787.315 456.998a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 456.998a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM844.22 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM863.188 456.998a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001 0zM882.155 456.998a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM901.123 456.998a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM692.477 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM711.444 476.22a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM730.412 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM749.38 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM768.348 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM787.315 476.22a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 476.22a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM844.22 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013 0zM863.188 476.22a1.5 1.5 0 11-3.002 0 1.5 1.5 0 013.001 0zM882.155 476.22a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM901.123 476.22a1.5 1.5 0 11-3.001 0 1.5 1.5 0 013.001 0zM692.477 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM711.444 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM730.412 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM749.38 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM768.348 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM787.315 495.443a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM806.283 495.443a1.5 1.5 0 11-2.998.001 1.5 1.5 0 012.998-.001zM825.252 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM844.22 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM863.188 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM882.155 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM901.123 495.443a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM692.477 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM711.444 514.667a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM730.412 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM749.38 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM768.348 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM787.315 514.667a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 514.667a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM844.22 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM863.188 514.667a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001 0zM882.155 514.667a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM901.123 514.667a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM692.477 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM711.444 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM730.412 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM749.38 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM768.348 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM787.315 533.89a1.5 1.5 0 11-2.998 0 1.5 1.5 0 012.998 0zM806.283 533.89a1.5 1.5 0 11-2.998 0 1.5 1.5 0 012.998 0zM825.252 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM844.22 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM863.188 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM882.155 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM901.123 533.89a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM692.477 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM711.444 553.113a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 .001zM730.412 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM749.38 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM768.348 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM787.315 553.113a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 553.113a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM844.22 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 .001zM863.188 553.113a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001.001zM882.155 553.113a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 .001zM901.123 553.113a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001.001zM692.477 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM711.444 572.336a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM730.412 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM749.38 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM768.348 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM787.315 572.336a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 572.336a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM844.22 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM863.188 572.336a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001 0zM882.155 572.336a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM901.123 572.336a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM692.477 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM711.444 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM730.412 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM749.38 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM768.348 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM787.315 591.558a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM806.283 591.558a1.5 1.5 0 11-2.998.002 1.5 1.5 0 012.998-.002zM825.252 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM844.22 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM863.188 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM882.155 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM901.123 591.558a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM692.477 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM711.444 610.782a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM730.412 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM749.38 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM768.348 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM787.315 610.782a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM806.283 610.782a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM825.252 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0zM844.22 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013 0zM863.188 610.782a1.5 1.5 0 11-3.002-.001 1.5 1.5 0 013.001 0zM882.155 610.782a1.5 1.5 0 11-3-.001 1.5 1.5 0 013 0zM901.123 610.782a1.5 1.5 0 11-3.001-.001 1.5 1.5 0 013.001 0z">
+          </path>
+          <path fill="none" stroke="#B90000" stroke-miterlimit="50" stroke-width="2"
+            d="M846.646 332.048v0l22.258.562v0l-.56-22.26v0l22.258.56v0l-.56-22.258v0l22.259.56v0l-.56-22.257v0l22.26.559v0l-.56-22.26v0">
+          </path>
+          <path fill="none" stroke="#B90000" stroke-miterlimit="50" stroke-width="2"
+            d="M2.114 541.705v0l-.56 22.258v0l22.258-.561v0l-.56 22.259v0l22.258-.56v0l-.56 22.258v0l22.258-.56v0l-.559 22.26v0l22.26-.56v0">
+          </path>
+        </svg>
+      </div>
+
+      <!-- Section Content -->
+      <div class="l-container">
+
+        <!-- My Personal Photo -->
+        <div class="c-section__hero-img">
+          <div>
+            <img src="images/final-1.png" alt="My Personal Photo">
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <h1 class="c-section__header c-section__header--home"></h1>
+
+        <!-- Section Subheader -->
+        <h2 class="c-section__subheader">
+          <span class="c-section__subheader__text">I’m Ahmed</span>
+          <span class="c-section__subheader__caret"></span>
+        </h2>
+
+        <!-- Section Description -->
+        <p class="c-section__description" data-lang="home-section__description">
+          Thanks to my experience and skills in frontend development, I can help you build interactive and amazing
+          websites... Have fun exploring my website!
+        </p>
+
+        <!-- Section Button -->
+        <a href="#projects" class="c-btn js-projects-section-btn" data-lang="home-section__btn">
+          Show my work
+        </a>
+      </div>
+
+      <!-- A Decorative Curved Image -->
+      <img class="c-section__curve-img c-section__curve-img--bottom" src="images/bg-section-top-mobile-1.svg" alt="">
+
+    </section>
+
+    <!-- About Section -->
+    <section class="c-section c-section--about" id="about" data-lang>
+
+      <!-- Decorative Mockups -->
+      <div class="c-decorator">
+        <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="193" viewBox="0 0 325 193" data-shape="true"
+          aria-hidden="true" id="cs-pattern-left">
+          <path fill="none" stroke="#B90000" stroke-miterlimit="50" stroke-width="2"
+            d="M17.053 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM45.122 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM73.19 9.57a7.891 7.891 0 11-15.781 0 7.891 7.891 0 0115.782 0zM101.26 9.57a7.891 7.891 0 11-15.782 0 7.891 7.891 0 0115.782 0zM129.329 9.57a7.891 7.891 0 11-15.783 0 7.891 7.891 0 0115.783 0zM238.083 103.963v0l-.561 22.259v0l22.259-.561v0l-.561 22.258v0l22.259-.56v0l-.561 22.258v0l22.259-.56v0l-.559 22.26v0l22.26-.56v0">
+          </path>
+        </svg>
+      </div>
+
+      <!-- Section Content -->
+      <div class="l-container">
+
+        <!-- Section Header -->
+        <h2 class="c-section__header u-uppercase c-aos c-aos--top" data-lang="nav-link-2">
+          about me
+        </h2>
+
+        <!-- Section Description -->
+        <p class="c-section__description c-aos c-aos--bottom" data-lang="about-section__description">
+          My name is Ahmed Saad and I’m <bdi class="js-my-age">17</bdi>. I live in a small city in Egypt called
+          Fayoum.
+          I’m a high school student. 2
+          years ago, I found my passion in programming. I immediately took up <span
+            class="u-uppercase u-marker">CS50</span>
+          which set the stage for me to explore
+          this world quite deeply. Among different fields, I chose frontend development as my main interest and I
+          started to learn its tools on my own. I really like turning cool designs into interactive code and I hope this
+          helps make the web a better place. I’m fluent in English as I’m interested in
+          foreign languages too.
+        </p>
+      </div>
+
+      <!-- A Decorative Curved Image -->
+      <img class="c-section__curve-img c-section__curve-img--bottom" src="images/bg-section-top-mobile-1.svg" alt="">
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="c-section c-section--projects" id="projects" data-lang>
+
+      <!-- Decorative Curved Images -->
+      <img class="c-section__curve-img c-section__curve-img--top" src="images/bg-section-bottom-mobile-1.svg" alt="">
+      <img class="c-section__curve-img c-section__curve-img--bottom" src="images/bg-section-top-mobile-1.svg" alt="">
+
+      <!-- Section Content -->
+      <div class="l-container">
+
+        <!-- Section Header -->
+        <h2 class="c-section__header u-uppercase c-aos c-aos--top" data-lang="nav-link-3">
+          My Work
+        </h2>
+
+        <!-- Section Description -->
+        <p class="c-section__description c-aos c-aos--bottom" data-lang="projects-section__description">
+          Here are some of my projects.
+          Most of which were implemented from scratch.....
+        </p>
+
+        <!-- Section Gallery -->
+        <div class="gallery">
+          <div class="gallery__still-container">
+            <div class="gallery__moving-container" data-lang=""></div>
+          </div>
+          <div class="gallery__btns-container">
+            <button class="gallery__previous-btn" data-lang="" type="button">
+              <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="nav-link-5">Previous Slide</span>
+            </button>
+            <button class="gallery__next-btn" data-lang="" type="button">
+              <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="nav-link-5">Next Slide</span>
+            </button>
+          </div>
+          <div class="gallery__indicators"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Stack Section -->
+    <section class="c-section c-section--stack" id="stack" data-lang>
+
+      <!-- A Decorative Curved Image -->
+      <img class="c-section__curve-img c-section__curve-img--bottom" src="images/bg-section-top-mobile-2.svg" alt="">
+
+      <!-- A Decorative Cube -->
+      <div class="cubes-container">
+        <div class="layer" style="--offset: 0">
+          <div class="cube" style="--main-color: #F25320">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #006AB1">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #F2D400">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #CA699C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+          </div>
+          <div class="cube">
+            <span class="cube__aspect cube__aspect--front"></span>
+            <span class="cube__aspect cube__aspect--back"></span>
+          </div>
+          <div class="cube" style="--main-color: #5CCFEE">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #8211F2">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #202124">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #09C47C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+          </div>
+        </div>
+        <div class="layer" style="--offset: 1">
+          <div class="cube" style="--main-color: #F25320">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #006AB1">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #F2D400">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #CA699C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+          </div>
+          <div class="cube">
+            <span class="cube__aspect cube__aspect--front"></span>
+            <span class="cube__aspect cube__aspect--back"></span>
+          </div>
+          <div class="cube" style="--main-color: #5CCFEE">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #8211F2">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #202124">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #09C47C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+          </div>
+        </div>
+        <div class="layer" style="--offset: -1">
+          <div class="cube" style="--main-color: #F25320">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-html5"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #006AB1">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-css3-alt"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #F2D400">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-square-js"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #CA699C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-sass"></i>
+            </span>
+          </div>
+          <div class="cube">
+            <span class="cube__aspect cube__aspect--front"></span>
+            <span class="cube__aspect cube__aspect--back"></span>
+          </div>
+          <div class="cube" style="--main-color: #5CCFEE">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-react"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #8211F2">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-bootstrap"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #202124">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-github"></i>
+            </span>
+          </div>
+          <div class="cube" style="--main-color: #09C47C">
+            <span class="cube__aspect cube__aspect--front" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+            <span class="cube__aspect cube__aspect--back" data-content="">
+              <i class="fa-brands fa-figma"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Content -->
+      <div class="l-container">
+
+        <!-- Section Header -->
+        <h2 class="c-section__header u-uppercase c-aos c-aos--top" data-lang="nav-link-4">
+          My Stack
+        </h2>
+
+        <!-- Section Description -->
+        <p class="c-section__description c-aos c-aos--bottom" data-lang="stack-section__description">
+          Some tools I've been using
+        </p>
+
+        <!-- Section Gallery -->
+        <div class="c-section__tools">
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #F25320">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-html5" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-html">
+                <i class="fa-brands fa-html5"></i>
+                <span class="u-uppercase">html</span> was the first tool I learnt.
+                I use it nearly in most of my projects.
+                I'm quite familiar with <span class="u-uppercase">html</span>
+                accessibility and <span class="u-uppercase">html</span> canvas.
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--bottom" style="--main-color: #006AB1">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-css">
+                <i class="fa-brands fa-css3-alt"></i>
+                I love <span class="u-uppercase">css</span> (including all its weird stuff) and I find it a releif for
+                every frontend developer.
+                Since my beginnings, I've been experimenting with <span class="u-uppercase">css</span> animations,
+                transitions and of course the world of 3D.
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #F2D400">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-square-js" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-js">
+                <i class="fa-brands fa-square-js"></i>
+                <span class="u-uppercase">js</span> is just amazing and the evolution of it is fantastic.
+                I'm pretty familiar with most of <span class="u-uppercase">js</span> basics as well as
+                many of its <span class="u-uppercase">api</span>s like
+                <span class="u-uppercase">dom,</span>
+                <span class="u-uppercase">bom,</span>
+                <span class="u-capitalize">fetch,</span>
+                <span class="u-capitalize">geolocation,</span>
+                <span class="u-capitalize">notifications,</span>
+                <span class="u-capitalize">fullscreen,</span>
+                <span class="u-capitalize">intersection oboserver,</span>
+                <span class="u-capitalize">fullscreen,</span> and
+                <span class="u-capitalize">vibration</span>
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #CA699C">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-sass" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-sass">
+                <i class="fa-brands fa-sass"></i>
+                I learned <span class="u-uppercase">sass</span> along with GitHub and
+                I'm pretty familiar with all the features it has like mixins, variables,
+                concatenation up to modules. I use it interchangeably with <span class="u-uppercase">css</span>
+                according to the scale of the project.
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--bottom" style="--main-color: #5CCFEE">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-react" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-react">
+                <i class="fa-brands fa-react"></i>
+                Progressing
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #8211F2">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-bootstrap">
+                <i class="fa-brands fa-bootstrap"></i>
+                Progressing
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #202124">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-github">
+                <i class="fa-brands fa-github"></i>
+                After learning <span class="u-uppercase">html</span> and <span class="u-uppercase">css</span>, it was
+                really important that I learn a reliable tool like GitHub which enables me
+                to save my projects in a safe place as well as mingling with a lively community.
+              </p>
+            </div>
+          </div>
+          <div class="c-section__tool c-aos c-aos--top" style="--main-color: #09C47C">
+            <button class="c-section__tool__open-btn" type="button">
+              <i class="fa-brands fa-figma" aria-hidden="true"></i>
+              <span class="u-sr-only" data-lang="stack-tool-content">Click To Expand The Content</span>
+            </button>
+            <div class="c-section__tool__content">
+              <button class="c-section__tool__close-btn" data-lang="" aria-label="Close Expanding Box" type="button">
+                <img src="images/icon-close.svg" alt="">
+              </button>
+              <p data-lang="tools-figma">
+                <i class="fa-brands fa-figma"></i>
+                In order for me to make my own designs,
+                I started learning how to use <span class="u-capitalize">figma.</span>. With all the features it has,
+                it's a great tool for designing layouts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="c-section c-section--contact" id="contact" data-lang=>
+
+      <!-- A Decorative Curved Image -->
+      <img class="c-section__curve-img c-section__curve-img--top" src="images/bg-section-bottom-mobile-1.svg" alt="">
+
+      <!-- Section Content -->
+      <div class="l-container">
+
+        <!-- A Confiramtion Message For When The Form Is Submitted -->
+        <p class="form-message-status"></p>
+
+        <!-- Section Header -->
+        <h2 class="c-section__header c-aos c-aos--top" data-lang="nav-link-5">Contact Me</h2>
+
+        <!-- Section Description -->
+        <p class="c-section__description" data-lang="contact-section__description-1">
+          Don't hesitate to get in touch....
+        </p>
+
+        <!-- Section Form And Contact Info -->
+        <div class="c-section__content">
+
+          <!-- Contact Info -->
+          <div class="c-section__contact-info c-aos c-aos--bottom" style="--grid-area: info">
+            <div class="c-section__phone-info" data-lang>
+              <span class="icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </span>
+              <span class="text">
+                (+20) 1014685077
+              </span>
+            </div>
+            <div class="c-section__email-info" data-lang>
+              <span class="icon">
+                <i class="fa-regular fa-envelope"></i>
+              </span>
+              <span class="text">
+                ahmedsaad112004cr@gamil.com
+              </span>
+              <span class="text">
+                ahmedsaad112004cr@hotmail.com
+              </span>
+            </div>
+          </div>
+
+          <!-- A Separator -->
+          <p class="c-section__description c-aos c-aos--bottom" data-lang="contact-section__description-2">
+            Drop me a line:
+          </p>
+
+          <!-- Section Form -->
+          <form class="c-section__form c-aos c-aos--bottom" data-lang="">
+            <input class="c-section__form__element c-section__form__name" type="text" name="name" placeholder="Name"
+              style="--grid-area: name" aria-label="Your name" required aria-required="true">
+            <input class="c-section__form__element c-section__form__email" type="email" name="email" placeholder="Email"
+              style="--grid-area: email" aria-label="Your email" required aria-required="true">
+            <textarea class="c-section__form__element c-section__form__message" name="message"
+              placeholder="Your message" style="--grid-area: message" aria-label="Your message" required
+              aria-required="true"></textarea>
+            <input class="c-section__form__element c-section__form__submit-btn" type="submit" name="submit" value="Send"
+              style="--grid-area: submit" aria-label="Send your message">
+          </form>
+
+          <!-- Attribution For Mobile -->
+          <div class="c-section__attribution" style="--grid-area: icons">
+            <div class="l-wrapper">
+              <p class="c-attribution" data-lang="attribution">
+                Made with <i class="fa-regular fa-heart"></i> by <span class="u-capitalize">ahmed saad</span>
+              </p>
+              <div class="c-section__attribution__links">
+                <span style="--main-color: #385490">
+                  <a href="https://web.facebook.com/abkareenooo/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    <span class="u-sr-only" data-lang="facebook-link">Facebook Link</span>
+                  </a>
+                </span>
+                <span style="--main-color: #000">
+                  <a href="https://github.com/Ahmed-Elbald" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span class="u-sr-only" data-lang="github-link">GitHub Link</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+@use "variables-mixins.scss" as *;
+
+/* Utility Classes */
+.u-capitalize {
+  text-transform: capitalize;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.u-txt-center {
+  text-align: center;
+}
+
+.u-marker {
+  color: var(--clr-pr-700);
+  font-weight: var(--fw-bold);
+
+  &::selection {
+    background-color: var(--clr-neu-300);
+  }
+}
+
+.u-sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+// .u-capitalize {
+//   text-transform: capitalize;
+// }
+
+// .u-capitalize {
+//   text-transform: capitalize;
+// }
+
+// .u-capitalize {
+//   text-transform: capitalize;
+// }

@@ -1,0 +1,212 @@
+@use "variables-mixins.scss" as *;
+
+/* Contact Section */
+
+.c-section--contact {
+  padding-bottom: var(--flow-spacer-6);
+
+  @include min-mq($desktop) {
+    padding-bottom: var(--flow-spacer-2);
+
+    .l-container {
+      position: relative;
+    }
+  }
+
+  .form-message-status {
+    position: fixed;
+    top: var(--flow-spacer-2);
+    inset-inline-end: -100%;
+    padding: var(--flow-spacer-1);
+    background-color: var(--clr-neu-400);
+    line-height: 1.2;
+    transition-duration: 1000ms;
+    z-index: 1000;
+
+    &.js-show-up {
+      inset-inline-end: var(--flow-spacer-1);
+    }
+
+    @include min-mq($desktop) {
+      position: absolute;
+      top: 0;
+
+      &.js-show-up {
+        inset-inline-end: 0;
+      }
+    }
+  }
+
+  .c-section__content {
+    width: 100%;
+    @include flex-column-gap(var(--flow-spacer-2));
+
+    @include minmax-mq($tablet, $desktop) {
+      width: var(--max-width-tablet);
+    }
+
+    @include min-mq($desktop) {
+      max-width: none;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr max-content;
+      grid-template-columns: 1fr max-content;
+      -ms-grid-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+
+    .c-section__description {
+      margin: var(--flow-spacer-2) auto;
+
+      @include min-mq($desktop) {
+        display: none;
+      }
+    }
+  }
+
+  .c-section__form {
+    @include flex-column-gap(var(--flow-spacer-2));
+    margin-bottom: var(--flow-spacer-3);
+
+    @include min-mq($desktop) {
+      grid-column: 1;
+      grid-row: 1 / -1;
+      margin-bottom: 0;
+    }
+
+    &__element {
+      width: 100%;
+      padding: var(--flow-spacer-2);
+      border-radius: 5px;
+      background-color: var(--clr-neu-400);
+      color: var(--clr-neu-300);
+      caret-color: var(--clr-neu-300);
+      transition-duration: .5s;
+
+      @include min-mq($desktop) {
+        font-size: var(--fs-250);
+      }
+
+    }
+
+    &.js-ltr .c-section__form__element {
+      padding: var(--flow-spacer-1);
+    }
+
+    &__message {
+      resize: none;
+      height: 180px;
+    }
+
+    &__submit-btn {
+      width: max-content;
+      padding: var(--flow-spacer-2) var(--flow-spacer-4);
+      background-color: var(--clr-neu-400);
+      opacity: .5;
+      cursor: pointer;
+      color: var(--clr-neu-300);
+      font-size: var(--fs-300);
+      font-weight: var(--fw-bold);
+      letter-spacing: 2px;
+      transition-duration: .5s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.js-ltr .c-section__form__submit-btn {
+      padding: var(--flow-spacer-1) var(--flow-spacer-4);
+    }
+  }
+
+  .c-section__contact-info {
+    direction: ltr;
+    height: max-content;
+    padding: var(--flow-spacer-2);
+    border-radius: 10px;
+    background-color: var(--clr-neu-400);
+    opacity: .75;
+    overflow: auto;
+
+    >div {
+      @include flex-column-gap(var(--flow-spacer-2));
+
+      &.js-ltr {
+        gap: 0;
+      }
+
+      &:first-child {
+        margin-bottom: var(--flow-spacer-2);
+      }
+
+      .icon {
+        font-size: var(--fs-300);
+      }
+    }
+  }
+
+  .c-section__attribution {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--clr-neu-400);
+
+    @include min-mq($desktop) {
+      position: static;
+      height: max-content;
+    }
+
+    .l-wrapper {
+      padding-block: var(--flow-spacer-2);
+      margin-inline: var(--flow-spacer-1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include minmax-mq($tablet, $desktop) {
+        width: var(--max-width-tablet);
+        margin-inline: auto;
+      }
+
+      @include min-mq($desktop) {
+        justify-content: center;
+      }
+
+      @include max-mq(450px) {
+        flex-direction: column;
+        gap: var(--flow-spacer-2);
+        justify-content: unset;
+      }
+    }
+
+    .c-attribution {
+      @include min-mq($desktop) {
+        display: none;
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: var(--flow-spacer-2);
+
+      span {
+        @include flex-centering();
+        font-size: var(--fs-250);
+        transition-duration: 300ms;
+
+        &:hover {
+          color: var(--main-color);
+        }
+
+        @include min-mq($desktop) {
+          font-size: var(--fs-400);
+        }
+      }
+    }
+
+  }
+
+}

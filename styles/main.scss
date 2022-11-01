@@ -1,0 +1,143 @@
+// Importing Files
+@use "variables-mixins.scss" as *;
+@use "global.scss" as *;
+@use "utilities.scss" as *;
+@use "components.scss" as *;
+@use "headers.scss" as *;
+@use "home.scss" as *;
+@use "projects.scss" as *;
+@use "stack.scss" as *;
+@use "contact.scss" as *;
+
+/* Body */
+body {
+  background-color: var(--clr-pr-600);
+
+  &.js-arabic {
+    direction: rtl;
+    font-family: var(--ff-ar), sans-serif;
+  }
+
+  @include min-mq($desktop) {
+    height: 100vh;
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 280px;
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  @include flex-centering();
+  background-color: var(--clr-neu-400);
+  z-index: 90000;
+  transition-duration: 1000ms;
+
+  &.js-fade {
+    @include hidden();
+  }
+
+  &__loops-container {
+    direction: ltr;
+    display: flex;
+  }
+
+  &__loop {
+    --dimention: 200px;
+    position: relative;
+    width: var(--dimention);
+    height: var(--dimention);
+    margin: 0 -7.5px;
+
+    &--left {
+      transform: rotate(-180deg);
+
+      @include max-mq($tablet) {
+        @include hidden();
+        position: absolute;
+      }
+    }
+
+    span {
+      --before-bg: transparent;
+      position: absolute;
+      inset: 0;
+      transform: rotate(calc(var(--order) * 360deg / 20));
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: var(--clr-pr-700);
+        animation: loop 4s linear infinite;
+        animation-delay: calc(var(--order) * 100ms);
+        transform: scale(.1);
+        box-shadow: 0 0 5px var(--clr-pr-700),
+          0 0 10px var(--clr-pr-700),
+          0 0 15px var(--clr-pr-700),
+          0 0 20px var(--clr-pr-700);
+      }
+    }
+
+    @keyframes loop {
+      0% {
+        transform: scale(1);
+      }
+
+      50%,
+      100% {
+        transform: scale(0);
+      }
+    }
+
+  }
+
+  .loader__loop--left span::before {
+    animation-delay: calc(var(--order) * -100ms);
+  }
+
+
+}
+
+
+.main {
+  position: relative;
+
+  &__gate {
+    --border-width: 5px;
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--clr-neu-400);
+    z-index: 1000;
+    transition-duration: .5s;
+
+    &.js-close {
+      width: 50%;
+    }
+
+    @include max-mq($desktop) {
+      display: none;
+    }
+
+    &--right {
+      inset-inline-end: calc(-1 * var(--border-width));
+      border-inline-start: var(--border-width) solid var(--clr-pr-700);
+    }
+
+    &--left {
+      inset-inline-start: calc(-1 * var(--border-width));
+      border-inline-end: var(--border-width) solid var(--clr-pr-700);
+    }
+  }
+}

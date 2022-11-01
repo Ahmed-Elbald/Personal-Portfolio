@@ -1,0 +1,154 @@
+// Variables
+$mobile: 250px;
+$tablet: 700px;
+$desktop: 1000px;
+
+// Mixins
+@mixin grid-centering {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin prefix($property, $value) {
+  #{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+}
+
+@mixin position-centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefix(transform, translate(-50%, -50%))
+}
+
+@mixin pseudo-element($content) {
+  content: $content;
+  position: absolute;
+}
+
+@mixin position($Y-axis, $Y-value, $X-axis, $X-value, $X, $Y) {
+  position: absolute;
+  #{$Y-axis}: $Y-value;
+  #{$X-axis}: $X-value;
+  transform: translate($X, $Y);
+}
+
+@mixin circle($diameter) {
+  border-radius: 50%;
+  width: $diameter;
+  height: $diameter;
+}
+
+@mixin flex-layout($dir, $justify, $align-item, $align-cont, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align-item;
+  flex-wrap: $wrap;
+  align-content: $align-cont;
+}
+
+@mixin grid-layout($rows, $columns, $gap) {
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+@mixin flex-row-gap($gap, $justify) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  justify-content: $justify;
+}
+
+@mixin flex-column-gap($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin flex-between($align) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+@mixin grid-fit($min, $gap) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+}
+
+@mixin min-mq($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin max-mq($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin minmax-mq($min-size, $max-size) {
+  @media (min-width: $min-size) and (max-width: $max-size) {
+    @content;
+  }
+}
+
+@mixin triangle-direction($direction, $color) {
+  border-#{$direction}-color: $color
+}
+
+@mixin triangle($size, $color, $direction) {
+  border: $size solid transparent;
+  @include triangle-direction($direction, $color);
+}
+
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color: $color, $alpha: $opacity);
+}
+
+@mixin hidden() {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@mixin show-up() {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@mixin text-stroke($strokeWidth) {
+  color: var(--clr-neu-300);
+
+  @supports (-webkit-text-stroke: 1px red) {
+    color: transparent;
+    -webkit-text-stroke: $strokeWidth var(--clr-pr-700);
+  }
+}
+
+@mixin scrollbar($track, $thumb) {
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb;
+  }
+
+  @supports (scrollbar-color: red blue) {
+    scrollbar-color: $track $thumb;
+  }
+
+}

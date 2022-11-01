@@ -1,0 +1,140 @@
+/* Global Rules */
+:root {
+  --container-min-1: 1100px;
+  --container-min-2: 90%;
+
+  --max-width-mobile: 400px;
+  --max-width-tablet: 650px;
+
+  --slides-gap: 1rem;
+
+
+  --ff-en: 'League Spartan';
+  --ff-ar: 'Cairo';
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
+
+  --fs-100: .85rem;
+  --fs-200: 1rem;
+  --fs-250: 1.25rem;
+  --fs-300: 1.5rem;
+  --fs-400: 2rem;
+  --fs-500: 3rem;
+  --fs-600: 4rem;
+  --fs-700: 6rem;
+  --fs-800: 8rem;
+
+
+  --flow-spacer-0: .25rem;
+  --flow-spacer-1: .5rem;
+  --flow-spacer-2: 1rem;
+  --flow-spacer-3: 2rem;
+  --flow-spacer-4: 4rem;
+  --flow-spacer-5: 5rem;
+  --flow-spacer-6: 7rem;
+
+  --clr-pr-700: #B90000;
+  --clr-pr-600: #0C0F0A;
+  --clr-pr-200: #b8000080;
+
+  --clr-neu-100: #00000080;
+  --clr-neu-200: #ffffff20;
+  --clr-neu-300: #FFFFFF;
+  --clr-neu-500: #171717;
+  --clr-neu-400: #1E1E1E;
+
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-neu-200);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--clr-pr-600);
+}
+
+::selection {
+  background-color: var(--clr-pr-700);
+}
+
+@supports (scrollbar-color: red blue) {
+
+  * {
+    scrollbar-color: var(--clr-pr-700) var(--clr-pr-600);
+    scrollbar-width: thin;
+  }
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+html {
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
+  }
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+input,
+button,
+textarea {
+  &:focus-visible {
+    box-shadow: 0 0 15px var(--clr-neu-200);
+  }
+}
+
+button {
+  background-color: transparent;
+}
+
+button>* {
+  pointer-events: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--ff-en), sans-serif;
+  color: var(--clr-neu-300);
+}
+
+a,
+button {
+  cursor: pointer;
+}
