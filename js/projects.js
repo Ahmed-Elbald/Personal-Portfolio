@@ -12,21 +12,15 @@ export const loader = document.getElementById("page-loader");
 
 // Imported
 import { currentSection } from "./main.js";
+import { certificateGallery, hideGallery } from "./about.js";
 
 // Global Variables
-export let dataPlaced = false;
 export let windowWidth;
 let intervalHandler;
 let projectsLength;
 let numberOfSlides;
 let activeSlide = 1;
 let itemsPerSlide;
-
-const slidesGap = parseInt(
-  window.getComputedStyle(
-    document.documentElement
-  ).getPropertyValue("--slides-gap")
-);
 
 const techologies = {
   "html": "fa-brands fa-html5",
@@ -90,8 +84,7 @@ function insertItem(data, counter) {
   galleryItemClone.innerHTML =
     `
     <div class="c-triangle c-triangle--top" style="--dimention: 30px" data-lang=""></div>
-    <div class="c-triangle c-triangle--bottom" style="--dimention: 30px" data-lang="">
-    </div>
+    <div class="c-triangle c-triangle--bottom" style="--dimention: 30px" data-lang=""></div>
     <img src="images/${repoTitle}.jpg" alt="" class="gallery__item__img">
     <div class="gallery__item__content">
       <h3 class="gallery__item__title">${repoTitle.replaceAll("-", " ")}</h3>
@@ -301,8 +294,6 @@ function adjustCurrentIndicator() {
 
 function autoSlide() {
 
-  const projectsSection = document.querySelector(".c-section--projects");
-
   // If the galleryStillContainer gets hoverd, stop the auto sliding
   galleryStillContainer.onmouseenter = () => clearInterval(intervalHandler);
 
@@ -316,12 +307,25 @@ function autoSlide() {
 
 function adjustWindowResizing() {
 
-  windowWidth = window.innerWidth;
+  // Hide the gallery of the about section (Not related to the projectSection)
+  hideGallery();
 
+
+  windowWidth = window.innerWidth;
   // Set the itemsPerSlide variable according to the screen size
-  if (windowWidth < 700) itemsPerSlide = 1;
-  else if (windowWidth > 700 && windowWidth < 1300) itemsPerSlide = 2;
-  else itemsPerSlide = 3;
+  if (windowWidth > 1300) {
+    itemsPerSlide = 3;
+  } else {
+    if (windowWidth < 1000) {
+      certificateGallery.style.top = "50%";
+      certificateGallery.style.left = "50%";
+    }
+    if (windowWidth > 700) {
+      itemsPerSlide = 2;
+    } else {
+      itemsPerSlide = 1;
+    }
+  }
 
   // Set the "items-per-slide" custom property to use in order to lay out elements properly
   galleryMovingContainer.style.setProperty("--items-per-slide", itemsPerSlide);

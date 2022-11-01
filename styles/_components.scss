@@ -190,7 +190,7 @@
     margin-block-end: var(--flow-spacer-3);
     line-height: 1.8;
     letter-spacing: 1px;
-
+    
     @include min-mq($tablet) {
       font-size: var(--fs-250);
       max-width: var(--max-width-tablet);

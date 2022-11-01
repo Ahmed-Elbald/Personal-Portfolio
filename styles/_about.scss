@@ -1,0 +1,99 @@
+@use "variables-mixins.scss" as *;
+
+/* About Section */
+.c-section--about {
+
+  .c-section__certificate-gallery {
+    @include position-centering();
+    position: fixed;
+    width: 0;
+    height: 0;
+    transition-duration: 500ms;
+    overflow: hidden;
+    z-index: 500;
+
+    @include min-mq($desktop) {
+      width: 400px;
+      height: 230px;
+      transform: translate(-10%, -110%);
+      @include hidden();
+
+      &.js-ltr {
+        transform: translate(-90%, -110%);
+      }
+    }
+
+    &.js-grow {
+      @include max-mq($desktop) {
+        width: 100%;
+        height: 100vh;
+      }
+
+      @include min-mq($desktop) {
+        @include show-up();
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--clr-neu-200);
+
+      @supports (backdrop-filter: blur(1rem)) {
+        backdrop-filter: blur(5px);
+      }
+
+      @include min-mq($desktop) {
+        background-color: transparent;
+        backdrop-filter: unset;
+      }
+
+    }
+
+    .close-btn {
+      position: absolute;
+      top: var(--flow-spacer-3);
+      inset-inline-end: var(--flow-spacer-3);
+
+      @include min-mq($desktop) {
+        display: none;
+      }
+    }
+
+    img {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      &.js-visible {
+        opacity: 1;
+      }
+
+      @include max-mq($desktop) {
+        @include position-centering();
+        width: 0;
+        height: auto;
+        border-radius: 10px;
+        z-index: 7;
+        opacity: 0;
+      }
+    }
+
+    &.js-grow img {
+
+      @include max-mq($desktop) {
+        width: 80%;
+        aspect-ratio: 16/9;
+      }
+
+      @include max-mq($tablet) {
+        width: 90%;
+        aspect-ratio: 4/3;
+      }
+    }
+  }
+
+}

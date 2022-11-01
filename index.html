@@ -11,7 +11,7 @@
   <title>Ahmed Saad | Portofolio</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon3.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/main.css">
@@ -379,6 +379,19 @@
       <!-- Section Content -->
       <div class="l-container">
 
+        <!-- Certificates Gallery -->
+        <div class="c-section__certificate-gallery" data-lang="">
+          <button class="close-btn" type="button">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+              <path fill="#FFF" fill-rule="evenodd"
+                d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z" />
+            </svg>
+            <span class="u-sr-only">Close the Gallery</span>
+          </button>
+          <img class="cs50" data-img="cs50" src="images/CS50x.png" alt="CS50 Certificate">
+          <img class="eg-fwd" data-img="eg-fwd" src="images/EG FWD.jpg" alt="EG FWD Certificate">
+        </div>
+
         <!-- Section Header -->
         <h2 class="c-section__header u-uppercase c-aos c-aos--top" data-lang="nav-link-2">
           about me
@@ -389,11 +402,17 @@
           My name is Ahmed Saad and I’m <bdi class="js-my-age">17</bdi>. I live in a small city in Egypt called
           Fayoum.
           I’m a high school student. 2
-          years ago, I found my passion in programming. I immediately took up <span
-            class="u-uppercase u-marker">CS50</span>
+          years ago, I found my passion in programming. I immediately took up <button
+            class="certificate-btn u-uppercase u-marker" type="button" data-img="cs50">CS50</button>
           which set the stage for me to explore
-          this world quite deeply. Among different fields, I chose frontend development as my main interest and I
-          started to learn its tools on my own. I really like turning cool designs into interactive code and I hope this
+          this world quite deeply. Among different fields, I chose frontend development as my main interest and I took
+          up <button class="certificate-btn u-uppercase u-marker" type="button" data-img="eg-fwd">eg fwd</button>
+          scholarship in web
+          development presented
+          by <span class="u-capitalize">udacity.</span>
+          Then, I
+          started to learn other technologies on my own. I really like turning cool designs into interactive code and I
+          hope this
           helps make the web a better place. I’m fluent in English as I’m interested in
           foreign languages too.
         </p>
@@ -854,7 +873,7 @@
 
           <!-- Contact Info -->
           <div class="c-section__contact-info c-aos c-aos--bottom" style="--grid-area: info">
-            <div class="c-section__phone-info" data-lang>
+            <div class="c-section__phone-info">
               <span class="icon">
                 <i class="fa-solid fa-phone-volume"></i>
               </span>
@@ -862,7 +881,7 @@
                 (+20) 1014685077
               </span>
             </div>
-            <div class="c-section__email-info" data-lang>
+            <div class="c-section__email-info">
               <span class="icon">
                 <i class="fa-regular fa-envelope"></i>
               </span>

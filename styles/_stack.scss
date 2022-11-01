@@ -143,6 +143,7 @@
       overflow: hidden;
 
       &__open-btn {
+        color: var(--clr-neu-200);
         font-size: var(--fs-800);
         transition: opacity 250ms, color 500ms;
 

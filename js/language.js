@@ -1,13 +1,12 @@
 // Elements
 const languageBtns = document.querySelectorAll(".c-language-btn");
-const languageRelatedElments = document.querySelectorAll("[data-lang]");
-
 
 // Imported
 import { loader } from "./projects.js"
 import { adjustSectionHeader, chooseNextPhrase } from "./home.js";
-import { setMyAge } from "./about.js";
+import { setMyAge, manageGallery, certificateGallery, currentImg, hideGallery } from "./about.js";
 import { translateForm } from "./contact.js";
+import { mobileNav, mobileNavOverlay } from "./main.js";
 
 // Global Variables
 export let language = "en";
@@ -17,8 +16,15 @@ languageBtns.forEach((btn) => {
 
   btn.addEventListener("click", () => { // When one of the "languageBtns" gets clicked:
 
+    // Get elements related to the language
+    const languageRelatedElments = document.querySelectorAll("[data-lang]");
+
     // Show up the page loader
     loader.classList.remove("js-fade");
+
+    // Close the mobile nav and the overlay
+    mobileNav.classList.remove("js-show-up");
+    mobileNavOverlay.classList.remove("js-grow");
 
     // Get the translition
     translation = getTranslition();
@@ -32,7 +38,7 @@ languageBtns.forEach((btn) => {
 
         language = "ar"; // Convert it to Arabic
         btnsAriaLabel = "English"; // Change the "aria-label" attribute of the "languageBtns"
-        document.documentElement.style.fontSize = "14px"; // Change the page's font-size
+        document.documentElement.style.fontSize = "15px"; // Change the page's font-size
         document.body.classList.add("js-arabic"); // Add "js-arabic" class to the "body"
 
       } else { // If it's Arabic, do the contrary
@@ -58,8 +64,6 @@ languageBtns.forEach((btn) => {
       // Adjust the HomeSection's subheader
       chooseNextPhrase();
 
-      // Set my age in the AboutSection
-      setMyAge();
 
       // Add the "js-ltr" class for "languageRelatedElements" and translate their content
       translation.then(response => {
@@ -77,6 +81,14 @@ languageBtns.forEach((btn) => {
           }
 
         });
+
+
+        // Set my age in the AboutSection
+        setMyAge();
+
+        // Hide the gallery and add event listeners to its buttons in the aboutSection
+        hideGallery();
+        manageGallery();
 
         // Make the loader Fade
         loader.classList.add("js-fade");

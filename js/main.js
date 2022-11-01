@@ -7,8 +7,8 @@ const sections = document.querySelectorAll(".c-section");
 
 const navToggleBtns = Array.from(document.getElementsByClassName("nav-toggle-btn"));
 
-const mobileNav = document.getElementById("mobile-nav");
-const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
+export const mobileNav = document.getElementById("mobile-nav");
+export const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
 const mobileNavLinks = document.querySelectorAll(".mobile-nav__links li");
 
 const desktopNav = document.getElementById("desktop-nav")
@@ -118,11 +118,14 @@ projectsSectionBtn.addEventListener("click", () => {
 
 function moveToChosenSection(clickedLink, targetedSection, linkOrder) {
 
-  // Close the two decorative divisions in the main
-  mainGates.forEach(gate => gate.classList.add("js-close"));
-
   // calculate how many sections we will move
   let difference = linkOrder - currentSectionIndex;
+
+  // If the user clicked the current section button, do nothing
+  if (difference === 0) return;
+
+  // Close the two decorative divisions in the main
+  mainGates.forEach(gate => gate.classList.add("js-close"));
 
   // Update the "currentSectionIndex" variable
   currentSectionIndex = linkOrder;
@@ -172,6 +175,15 @@ mobileNavLinks.forEach(link => {
 
     mobileNavLinks.forEach(link => link.classList.remove("js-current"));
     link.classList.add("js-current");
+
+    link.ontransitionend = (e) => {
+
+      if (e.propertyName === "opacity") {
+        mobileNav.classList.remove("js-show-up");
+        mobileNavOverlay.classList.remove("js-grow");
+      }
+
+    }
 
   });
 

@@ -3,6 +3,13 @@
 
 /* Mobile Header */
 .mobile-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: var(--clr-pr-600);
+
   @include min-mq($desktop) {
     display: none;
   }
@@ -10,6 +17,7 @@
   .l-container {
     position: relative;
     padding-top: var(--flow-spacer-2);
+    padding-bottom: var(--flow-spacer-2);
     @include flex-between(center);
   }
 
