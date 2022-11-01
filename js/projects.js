@@ -299,8 +299,11 @@ function autoSlide() {
 
   intervalHandler = setInterval(() => {
 
-    // If the current section is "projects", auto slide every 2 seconds
-    if (currentSection === "projects") moveToNext(1);
+    if (windowWidth > 1000) {
+      if (currentSection === "projects") moveToNext(1);
+    } else {
+      moveToNext(1);
+    }
 
   }, 2000)
 }
