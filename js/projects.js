@@ -60,7 +60,7 @@ fetch("./data/projects.json").then(async response => {
   autoSlide();
 
   // Make the page loader fade
-  setTimeout(() => loader.classList.add("js-fade"), 1500);
+  setTimeout(() => loader.classList.add("js-fade"), 1000);
 
   // Add event listeners to the next and previous buttons
   nextSlideBtn.addEventListener("click", () => {

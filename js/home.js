@@ -39,18 +39,20 @@ const homeSectionMiddleY = homeSection.clientHeight / 2;
 
 
 homeSection.addEventListener("mousemove", (e) => {
+
+  // If the current Section is not "home", return (to improve performance)
   if (currentSection !== "home") return;
 
-  // requestAnimationFrame(move);
+  requestAnimationFrame(move);
 
-  // function move() {
-  //   let xAxis = (e.offsetX - homeSectionMiddleX) * .2;
-  //   let yAxis = (e.offsetY - homeSectionMiddleY) * .5;
+  function move() {
+    let xAxis = (e.offsetX - homeSectionMiddleX) * .2;
+    let yAxis = (e.offsetY - homeSectionMiddleY) * .5;
 
-  //   sectionDecoratorSVG.style.transform = `translate(${-xAxis}px, ${-yAxis}px)`;
-  // }
+    sectionDecoratorSVG.style.transform = `translate(${-xAxis}px, ${-yAxis}px)`;
+  }
 
-  // requestAnimationFrame(move);
+  requestAnimationFrame(move);
 
 });
 
