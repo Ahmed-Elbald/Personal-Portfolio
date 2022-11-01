@@ -52,7 +52,7 @@
     }
 
     .close-btn {
-      position: absolute;
+      position: fixed;
       top: var(--flow-spacer-3);
       inset-inline-end: var(--flow-spacer-3);
 

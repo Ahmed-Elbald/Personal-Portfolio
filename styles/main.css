@@ -1187,7 +1187,7 @@ button {
   }
 }
 .c-section--about .c-section__certificate-gallery .close-btn {
-  position: absolute;
+  position: fixed;
   top: var(--flow-spacer-3);
   inset-inline-end: var(--flow-spacer-3);
 }
