@@ -18,7 +18,7 @@
     top: var(--flow-spacer-2);
     inset-inline-end: -100%;
     padding: var(--flow-spacer-1);
-    background-color: var(--clr-neu-400);
+    background-color: var(--clr-neu-200);
     line-height: 1.2;
     transition-duration: 1000ms;
     z-index: 1000;
@@ -79,7 +79,7 @@
       width: 100%;
       padding: var(--flow-spacer-2);
       border-radius: 5px;
-      background-color: var(--clr-neu-400);
+      background-color: var(--clr-neu-200);
       color: var(--clr-neu-300);
       caret-color: var(--clr-neu-300);
       transition-duration: .5s;
@@ -102,7 +102,7 @@
     &__submit-btn {
       width: max-content;
       padding: var(--flow-spacer-2) var(--flow-spacer-4);
-      background-color: var(--clr-neu-400);
+      background-color: var(--clr-neu-200);
       opacity: .5;
       cursor: pointer;
       color: var(--clr-neu-300);
@@ -126,7 +126,7 @@
     height: max-content;
     padding: var(--flow-spacer-2);
     border-radius: 10px;
-    background-color: var(--clr-neu-400);
+    background-color: var(--clr-neu-200);
     opacity: .75;
     overflow: auto;
 
@@ -152,7 +152,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--clr-neu-400);
+    background-color: var(--clr-neu-200);
 
     @include min-mq($desktop) {
       position: static;

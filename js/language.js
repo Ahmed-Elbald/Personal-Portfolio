@@ -94,7 +94,7 @@ languageBtns.forEach((btn) => {
         loader.classList.add("js-fade");
 
       });
-    }, 1500)
+    }, 2500)
 
   });
 });

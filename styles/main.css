@@ -138,10 +138,6 @@ button {
   text-transform: uppercase;
 }
 
-.u-txt-center {
-  text-align: center;
-}
-
 .u-marker {
   color: var(--clr-pr-700);
   font-weight: var(--fw-bold);
@@ -503,7 +499,7 @@ button {
   }
   @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
     .mobile-header .mobile-nav {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.1);
       -webkit-backdrop-filter: blur(1rem);
               backdrop-filter: blur(1rem);
     }
@@ -591,15 +587,14 @@ button {
           transform: translateX(0);
 }
 .mobile-header .mobile-nav__social-links {
-  position: absolute;
-  bottom: var(--flow-spacer-3);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: var(--flow-spacer-2);
+  margin-top: var(--flow-spacer-3);
   font-size: var(--fs-300);
 }
 @media (min-width: 700px) {
@@ -620,7 +615,7 @@ button {
 .mobile-header .mobile-nav-overlay {
   position: fixed;
   top: 0;
-  inset-inline-end: 0;
+  inset-inline-start: 0;
   width: 0;
   height: 100vh;
   background-color: var(--clr-neu-200);
@@ -1757,7 +1752,7 @@ button {
   top: var(--flow-spacer-2);
   inset-inline-end: -100%;
   padding: var(--flow-spacer-1);
-  background-color: var(--clr-neu-400);
+  background-color: var(--clr-neu-200);
   line-height: 1.2;
   -webkit-transition-duration: 1000ms;
           transition-duration: 1000ms;
@@ -1833,7 +1828,7 @@ button {
   width: 100%;
   padding: var(--flow-spacer-2);
   border-radius: 5px;
-  background-color: var(--clr-neu-400);
+  background-color: var(--clr-neu-200);
   color: var(--clr-neu-300);
   caret-color: var(--clr-neu-300);
   -webkit-transition-duration: 0.5s;
@@ -1856,7 +1851,7 @@ button {
   width: -moz-max-content;
   width: max-content;
   padding: var(--flow-spacer-2) var(--flow-spacer-4);
-  background-color: var(--clr-neu-400);
+  background-color: var(--clr-neu-200);
   opacity: 0.5;
   cursor: pointer;
   color: var(--clr-neu-300);
@@ -1879,7 +1874,7 @@ button {
   height: max-content;
   padding: var(--flow-spacer-2);
   border-radius: 10px;
-  background-color: var(--clr-neu-400);
+  background-color: var(--clr-neu-200);
   opacity: 0.75;
   overflow: auto;
 }
@@ -1907,7 +1902,7 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--clr-neu-400);
+  background-color: var(--clr-neu-200);
 }
 @media (min-width: 1000px) {
   .c-section--contact .c-section__attribution {

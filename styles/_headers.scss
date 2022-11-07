@@ -44,7 +44,7 @@
       transition-duration: 500ms;
 
       @supports (backdrop-filter: blur(1rem)) {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(1rem);
       }
 
@@ -123,12 +123,10 @@
 
 
     &__social-links {
-      position: absolute;
-      bottom: var(--flow-spacer-3);
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
+      justify-content: center;
       gap: var(--flow-spacer-2);
+      margin-top: var(--flow-spacer-3);
       font-size: var(--fs-300);
     }
 
@@ -156,7 +154,7 @@
   .mobile-nav-overlay {
     position: fixed;
     top: 0;
-    inset-inline-end: 0;
+    inset-inline-start: 0;
     width: 0;
     height: 100vh;
     background-color: var(--clr-neu-200);
